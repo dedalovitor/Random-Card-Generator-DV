@@ -65,18 +65,6 @@ function generateCard() {
   displayCard(randomCard(deck));
 }
 
-/* Adding an event listener to the random button. When the button is clicked, it will call the
-generateCard function. */
-random.addEventListener("click", () => {
-  generateCard();
-});
-
-/* Filtering the deck array to only include cards that do not have the same suit as the current card. */
-differentSuit.addEventListener("click", () => {
-  let filteredDeck = deck.filter(card => card.suit !== cardDiv.classList[1]);
-  displayCard(randomCard(filteredDeck));
-});
-
 /* Filtering the deck array to only include cards that have not been dealt. */
 noRepeat.addEventListener("click", () => {
   let filteredDeck = deck.filter(card => card.dealt !== true);
